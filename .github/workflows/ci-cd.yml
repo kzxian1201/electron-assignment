@@ -13,7 +13,7 @@ jobs:
     steps:
       # 检出代码
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 设置 Node.js 环境（请确认使用合适的 Node.js 版本）
       - name: Setup Node.js
