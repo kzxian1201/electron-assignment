@@ -40,7 +40,7 @@ jobs:
       # 可选：自动创建 GitHub Release 并上传打包产物
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.run_number }}
           name: Release ${{ github.run_number }}
@@ -48,7 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: path/to/package/*  # 请将此处替换为实际的打包产物路径
         env:
